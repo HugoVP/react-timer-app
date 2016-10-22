@@ -6,10 +6,7 @@ const Main = ({children}) => (
     <div>
         <Navigation/>
         <div className="row">
-            <div className="columns medium-6 large-4 small-centered">
-                <h2 className="text-center">
-                    Main.jsx Rendered
-                </h2>
+            <div className="column small-centered medium-6 large-4">
                 {children}
             </div>
         </div>
