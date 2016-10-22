@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hugovp/react-boilerplate.git"
+    "url": "https://github.com/hugovp/react-foundation-boilerplate.git"
   },
   "dependencies": {
     "axios": "^0.15.2",
