@@ -28,10 +28,34 @@ const Countdown = React.createClass({
     startTimer : function () {
         this.timer = setInterval(() => {
             const newCount = this.state.count - 1;
+
             this.setState({
                 count : newCount >= 0 ? newCount : 0,
             });
+
+            if (newCount === 0) {
+                this.setState({
+                    status : 'stopped',
+                });
+            }
         }, 1000);
+    },
+
+    componentWillMount : function () {
+
+    },
+
+    componentDidMount : function () {
+
+    },
+
+    componentWillUnmount : function () {
+        clearInterval(this.timer);
+        this.timer = undefined;
+    },
+
+    componentWillUpdate : function () {
+
     },
 
     componentDidUpdate : function (prevProps, prevState) {
@@ -74,6 +98,9 @@ const Countdown = React.createClass({
 
         return (
             <div>
+                <h1 className="page-title">
+                    Countdown App
+                </h1>
                 <Clock totalSeconds={count}/>
                 { renderControlArea() }
             </div>
