@@ -22,7 +22,7 @@ const Controls = React.createClass({
                         Pause
                     </button>
                 );
-            } else if (status === 'paused') {
+            } else /*if (status === 'paused')*/ {
                 return (
                     <button className="button primary" onClick={this.onStatusChange('started')}>
                         Start
